@@ -5,7 +5,7 @@ namespace App\Providers;
 use Carbon\Carbon;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
-use Laravel\Passport\Passport;
+//use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -26,9 +26,11 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        Passport::routes();
-        Passport::tokensExpireIn(Carbon::now()->addYears(20));//You can also use addDays(10)
-        Passport::refreshTokensExpireIn(Carbon::now()->addYears(20));//You can also use addDays(10)
+//        Passport::routes();
+//        Passport::tokensExpireIn(Carbon::now()->addYears(20));//You can also use addDays(10)
+//        Passport::refreshTokensExpireIn(Carbon::now()->addYears(20));//You can also use addDays(10)
+//        Passport::$ignoreCsrfToken = true;
+//        Passport::loadKeysFrom(__DIR__.'/../secrets/oauth');
 
         //
     }

@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Laravel\Passport\Passport;
+//use Laravel\Passport\Passport;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Passport::routes();
+//        Passport::routes();
+//        Passport::withoutCookieSerialization();
 //        Passport::loadKeysFrom(__DIR__.'/../secrets/oauth');
     }
 }
